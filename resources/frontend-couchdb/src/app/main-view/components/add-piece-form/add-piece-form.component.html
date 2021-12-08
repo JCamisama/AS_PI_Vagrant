@@ -1,0 +1,36 @@
+
+
+
+<form [formGroup]="myForm" class="row my-form p-2" autocomplete="off">
+
+    <div class="col-12 form-title">
+        <h3>Añadir una pieza</h3>
+    </div>
+
+    <div class="col">
+        <mat-form-field class="my-form-field" appearance="fill">
+            <mat-label>Nombre</mat-label>
+            <input matInput type="search" formControlName="name">
+            <button *ngIf="currentValue" matSuffix mat-icon-button aria-label="Clear" (click)="currentValue=''">
+              <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
+    <div class="col-12 mt-2">
+        <mat-form-field class="my-form-field" appearance="fill">
+            <mat-label>Compositor</mat-label>
+            <input matInput type="search" formControlName="composer">
+            <button *ngIf="currentValue" matSuffix mat-icon-button aria-label="Clear" (click)="currentValue=''">
+              <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+    </div>
+    <div class="col mt-3 d-flex justify-content-center">
+        <button mat-raised-button class="w-50"(click)="addNewPiece()">Añadir</button>
+    </div>
+
+</form>
+
+
+
+  
